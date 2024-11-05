@@ -14,4 +14,6 @@ CREATE TABLE etf (
     3Year real,
     5Year real,
     10Year real,
+
+    CHECK (expenseRatio >= 0),
 );
