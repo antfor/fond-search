@@ -38,7 +38,7 @@ const PROJECTIONS: { [projection: string]: Projection } = {
   geoStereographic,
 };
 
-// @ts-expect-error
+// @ts-expect-error Json has no type
 const world = topojson.feature(topology, topology.objects.units) as {
   type: 'FeatureCollection';
   features: FeatureShape[];
@@ -62,6 +62,17 @@ const color = scaleQuantize({
     '#8993f9',
     '#b6c8fb',
     '#65fe8d',
+  ],
+});
+
+const color = scaleQuantize({
+  domain: [
+    0,
+    1,
+  ],
+  range: [
+    '#000000',
+    '#019ece',
   ],
 });
 
