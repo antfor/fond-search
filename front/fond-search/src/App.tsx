@@ -1,5 +1,5 @@
 import DefaultNav from "./componets/navbar/DeafultNav"
-import Geo from "./componets/graph/geo/Geo2"
+import Geo from "./componets/graph/geo/Geo"
 import "./App.css"
 
 function App() {
