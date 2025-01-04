@@ -1,5 +1,6 @@
 import DefaultNav from "./componets/navbar/DeafultNav"
 import Geo from "./componets/graph/geo/Geo"
+import {Etf} from "./componets/graph/etf/ETF"
 import "./App.css"
 
 function App() {
@@ -7,14 +8,18 @@ function App() {
   const aspect = 1.8;//2.0;//1.8;
   return (
     <div>
-    <DefaultNav/>
+      <DefaultNav/>
       <h1 className="text-3xl font-bold underline">
         Hello world!
       </h1>
-      <Geo width={height*aspect} height={height}/>
-
+      <div className="flex justify-between">
+        <Etf className="size-auto"/>
+        <Geo width={height*aspect} height={height}/>
+      </div>
+      <Etf className="size-auto"/>
     </div>
   )
 }
-
+//
+//
 export default App

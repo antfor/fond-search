@@ -3,7 +3,7 @@ import { scaleQuantize } from '@visx/scale';
 import { NaturalEarth,Graticule } from '@visx/geo';
 import * as topojson from 'topojson-client';
 import topology from './world-topo.json';
-import {colorScaleArr} from '../../../assets/color.mts'
+import {colorScaleArr} from 'src/assets/color.mts'
 
 export const background = '#111827';
 

@@ -1,6 +1,6 @@
 
 
-
+//tw rose
 const colorScale = {
 
     bg50:  "#FFF1F2",
@@ -12,7 +12,15 @@ const colorScale = {
     bg800: "#9F1239",
     bg900: "#881337",
 }
-
 const colorScaleArr = Object.values(colorScale);
 
-export {colorScale, colorScaleArr};
+const bgScale = {
+    bg: '#111827',
+}
+
+function addAlpha(hex:string, a:number){
+    const alpha = Math.round(a*255).toString(16);
+    return hex.substring(0,7) + alpha; 
+}
+
+export {colorScale, colorScaleArr, bgScale, addAlpha} ;
