@@ -9,3 +9,9 @@ type Router struct{}
 func start(router *Router) {
 
 }
+
+//GET
+//PUT
+//POST
+//DELETE
+//PATHC

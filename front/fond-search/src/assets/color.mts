@@ -18,9 +18,11 @@ const bgScale = {
     bg: '#111827',
 }
 
-function addAlpha(hex:string, a:number){
-    const alpha = Math.round(a*255).toString(16);
-    return hex.substring(0,7) + alpha; 
+function addAlpha(hex:string, percent:number){
+    const alpha = Math.round(percent * 255);
+    const alphaHex = (alpha < 16 ? '0':'') + alpha.toString(16);
+
+    return hex.substring(0,7) + alphaHex; 
 }
 
 export {colorScale, colorScaleArr, bgScale, addAlpha} ;

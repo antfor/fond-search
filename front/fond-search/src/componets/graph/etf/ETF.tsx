@@ -11,8 +11,8 @@ export const ChartComponent = props => {
             backgroundColor = bgScale.bg,
             lineColor = colorScale.bg700,
             textColor = 'white',
-            areaTopColor = colorScale.bg700,
-            areaBottomColor = addAlpha(colorScale.bg400,0.28),//'rgba(244, 114, 182, 0.28)',
+            areaTopColor = addAlpha(colorScale.bg700,0.4),
+            areaBottomColor = addAlpha(colorScale.bg400,0.0),//'rgba(244, 114, 182, 0.28)',
         } = {},
     } = props;
 
