@@ -8,6 +8,7 @@ import {colorScaleArr} from 'src/assets/color.mts'
 export const background = '#111827';
 
 export type GeoMercatorProps = {
+  className: string;
   width: number;
   height: number;
   events?: boolean;
@@ -34,15 +35,16 @@ const color = scaleQuantize({
   range: colorScaleArr,
 });
 
-
-export default function Geo({ width, height, events = true }: GeoMercatorProps) {
+//height={height}
+export default function Geo({className, width, height, events = true }: GeoMercatorProps) {
   const centerX = width / 2;
   const centerY = height / 2;
   const scale = (width / 630) * 100;
-  console.log(world.features);
-
-  return width < 10 ? null : (
-    <svg width={width} height={height}>
+  //console.log(world.features);
+  //
+ 
+  return (
+    <svg className={className} height={height} width={width} >
       <rect x={0} y={0} width={width} height={height} fill={background} rx={14} />
       <NaturalEarth<FeatureShape>
         data={world.features}

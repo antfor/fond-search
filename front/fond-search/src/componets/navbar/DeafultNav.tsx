@@ -26,7 +26,7 @@ function NavButtons(item:Page, mobile:boolean){
   const desktopClasses= 'text-sm'; 
   const textclasses = mobile ? mobileClasses : desktopClasses;
   const classes = classNames(
-    item.current ? 'bg-pink-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+    item.current ? 'bg-pink-700 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
     'rounded-md px-3 py-2 font-medium', textclasses, 
   );
 

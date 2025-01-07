@@ -6,6 +6,7 @@ import {colorScale,addAlpha,bgScale} from 'src/assets/color.mts'
 //rgba(244, 114, 182, 0.28)'
 export const ChartComponent = props => {
     const {
+        className,
         data,
         colors: {
             backgroundColor = bgScale.bg,
@@ -49,7 +50,7 @@ export const ChartComponent = props => {
     );
 
     return (
-        <div className='size-full'
+        <div className={className}
             ref={chartContainerRef}
         />
     );
