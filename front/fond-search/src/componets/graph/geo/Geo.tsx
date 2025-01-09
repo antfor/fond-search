@@ -4,6 +4,7 @@ import { NaturalEarth,Graticule } from '@visx/geo';
 import * as topojson from 'topojson-client';
 import topology from './world-topo.json';
 import {colorScaleArr} from 'src/assets/color.mts'
+import BarChart from './bar'
 
 export const background = '#111827';
 
@@ -44,6 +45,7 @@ export default function Geo({className, width, height, events = true }: GeoMerca
   //
  
   return (
+    <>
     <svg className={className} height={height} width={width} >
       <rect x={0} y={0} width={width} height={height} fill={background} rx={14} />
       <NaturalEarth<FeatureShape>
@@ -70,5 +72,8 @@ export default function Geo({className, width, height, events = true }: GeoMerca
         )}
       </NaturalEarth>
     </svg>
+
+    <BarChart width={width} height={width}/>
+    </>
   );
 }

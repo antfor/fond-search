@@ -2,14 +2,14 @@ import DefaultNav from "./componets/navbar/DeafultNav"
 import Geo from "./componets/graph/geo/Geo"
 import Card from "./componets/basic/Card"
 import {Etf} from "./componets/graph/etf/ETF"
-import "./App.css"
 
 function Headline(){
 
+  const name ="Franklin Emerging Markets UCITS ETF";
+  const shortName="FLEX";
   return(
     <div className="mx-16 my-4">
-      <h1 className="text-3xl font-bold">
-        Franklin Emerging Markets UCITS ETF <span className="text-base text-rose-700"> (FLEX)</span>
+      <h1 className="text-3xl font-bold">{name}<span className="text-base text-rose-700"> ({shortName})</span>
       </h1>
       
     </div>
