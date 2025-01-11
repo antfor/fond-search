@@ -1,7 +1,8 @@
 import DefaultNav from "./componets/navbar/DeafultNav"
-import Geo from "./componets/graph/geo/Geo"
+import Geo from "./pages/etf/graph/geo/Geo"
 import Card from "./componets/basic/Card"
-import {Etf} from "./componets/graph/etf/ETF"
+import {Etf} from "./pages/etf/graph/compare/ETF"
+import Header from "./pages/etf/header/Header"
 
 function Headline(){
 
@@ -11,10 +12,8 @@ function Headline(){
     <div className="mx-16 my-4">
       <h1 className="text-3xl font-bold">{name}<span className="text-base text-rose-700"> ({shortName})</span>
       </h1>
-      
     </div>
   );
-
 }
 
 function App() {
@@ -23,7 +22,7 @@ function App() {
   return (
     <div>
       <DefaultNav/>
-        <Headline/>
+        <Header/>
         <div className="grid grid-cols-12 gap-4 min-h-32 mx-16">
           <div className="flex justify-center col-span-3">
             <Card className="size-full p-4"> </Card>
@@ -39,7 +38,7 @@ function App() {
              <div className="size-5 bg-orange-500" />
             </Card>
           </div>
-      </div>
+        </div>
     </div>
   )
 }
