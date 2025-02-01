@@ -3,18 +3,8 @@ import Geo from "./pages/etf/graph/geo/Geo"
 import Card from "./componets/basic/Card"
 import {Etf} from "./pages/etf/graph/compare/ETF"
 import Header from "./pages/etf/header/Header"
+import InfoPage from "./pages/etf/info/Info"
 
-function Headline(){
-
-  const name ="Franklin Emerging Markets UCITS ETF";
-  const shortName="FLEX";
-  return(
-    <div className="mx-16 my-4">
-      <h1 className="text-3xl font-bold">{name}<span className="text-base text-rose-700"> ({shortName})</span>
-      </h1>
-    </div>
-  );
-}
 
 function App() {
   const width = 300;
@@ -25,7 +15,9 @@ function App() {
         <Header/>
         <div className="grid grid-cols-12 gap-4 min-h-32 mx-16">
           <div className="flex justify-center col-span-3">
-            <Card className="size-full p-4"> </Card>
+            <Card className="size-full p-4"> 
+              <InfoPage/>
+            </Card>
           </div>
           <div className="col-span-6 ">
             <Card className="size-full p-4">
