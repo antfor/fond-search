@@ -8,6 +8,7 @@ import (
 	"runtime"
 	"strconv"
 
+	"github.com/antfor/fond-search/src/router"
 	"golang.org/x/sync/semaphore"
 )
 
@@ -33,6 +34,10 @@ func getPort() int {
 	return portNum
 }
 
+func getIP() string {
+	return "localhost"
+}
+
 func main() {
 
 	ctx = context.Background()
@@ -44,6 +49,11 @@ func main() {
 	}
 
 	fmt.Println("Selected port:", port)
+
+	ip := getIP()
+	fmt.Println("Selected ip:", ip)
+
+	router.RunRouter(ip, port)
 }
 
 /*
@@ -79,7 +89,7 @@ func listen(port int) {
 			defer sem.Release(1)
 
 			fmt.Println("Serve connection")
-			router.handleConnection(conn)
+			//router.handleConnection(conn)
 
 			fmt.Println("Done")
 
